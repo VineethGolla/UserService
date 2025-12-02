@@ -13,7 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 @MappedSuperclass
-@EntityListeners(AuditingEntityListener.class)
+@EntityListeners(AuditingEntityListener.class)   //to auto update Date, Time fields
 public abstract class BaseModel {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

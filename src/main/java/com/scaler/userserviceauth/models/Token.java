@@ -15,7 +15,7 @@ public class Token extends BaseModel {
     private String tokenValue;
     @ManyToOne
     private User user;
-    private Date expiryDate;
+    private Date expiryAt;
 
 }
 
