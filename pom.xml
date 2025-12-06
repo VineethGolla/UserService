@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.scaler</groupId>
     <artifactId>UserServiceAuth</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1-VINNY</version>
     <name>UserServiceAuth</name>
     <description>UserServiceAuth</description>
     <url/>
@@ -76,6 +76,24 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.20.0</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/io.jsonwebtoken/jjwt-api -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>0.13.0</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>0.13.0</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId> <!-- or jjwt-gson if Gson is preferred -->
+            <version>0.13.0</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 

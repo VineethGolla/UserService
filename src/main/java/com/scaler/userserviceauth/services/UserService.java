@@ -8,6 +8,6 @@ import lombok.Setter;
 
 public interface UserService {
     User signUp(String name, String email, String password);
-    Token login(String email, String password) throws PasswordMismatchException;
+    String login(String email, String password) throws PasswordMismatchException;
     User ValidateToken(String tokenValue) throws InvalidTokenException;
 }

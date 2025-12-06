@@ -36,13 +36,13 @@ public class UserController {
     }
 
     @PostMapping("/login")
-    public TokenDto login(@RequestBody LoginRequestDto requestDto) throws PasswordMismatchException {
-        Token token = userService.login(
-                requestDto.getEmail(),
-                requestDto.getPassword()
-        );
+    public String login(@RequestBody LoginRequestDto requestDto) throws PasswordMismatchException {
+//        Token token = userService.login(
+//                requestDto.getEmail(),
+//                requestDto.getPassword()
+//        );
 
-        return TokenDto.from(token);
+        return userService.login(requestDto.getEmail(), requestDto.getPassword());
     }
 
     @GetMapping("/validate/{tokenValue}")
