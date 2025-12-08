@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-import static org.hibernate.boot.model.NamedEntityGraphDefinition.Source.JPA;
+//import static org.hibernate.boot.model.NamedEntityGraphDefinition.Source.JPA;
 
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {

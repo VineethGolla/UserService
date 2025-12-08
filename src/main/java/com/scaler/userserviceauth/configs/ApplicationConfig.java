@@ -17,14 +17,14 @@ public class ApplicationConfig {
         return new BCryptPasswordEncoder();
     }
 
-    //if Bcrypt is used, then this must be used to disable security
-    @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        http
-                .csrf(csrf -> csrf.disable())
-                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
-        return http.build();
-    }
+//    if Bcrypt is used, then this must be used to disable security
+//    @Bean
+//    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//        http
+//                .csrf(csrf -> csrf.disable())
+//                .authorizeHttpRequests(auth -> auth.anyRequest().permitAll());
+//        return http.build();
+//    }
 
     @Bean
     public SecretKey getSecretKey() {

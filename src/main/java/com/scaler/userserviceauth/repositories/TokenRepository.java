@@ -10,7 +10,8 @@ import java.util.Optional;
 @Repository
 public interface TokenRepository extends JpaRepository<Token, Long> {
 //    @Override
-    Optional<Token> findByTokenValue(Long aLong);
+//    Optional<Token> findByTokenValue(Long aLong);
+    Optional<Token> findByTokenValue(String tokenValue);
 
     Token save(Token token);
 
