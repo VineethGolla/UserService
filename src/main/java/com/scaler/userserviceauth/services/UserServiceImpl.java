@@ -72,13 +72,13 @@ public class UserServiceImpl implements UserService {
             throw new PasswordMismatchException("Incorrect pwd:");
 
         }
-        Token token = new Token();
-        token.setUser(user);
-
-        //Apache commons lang3
-        token.setTokenValue(RandomStringUtils.randomAlphanumeric(120));
-
-        token.setExpiryAt(Date.from(Instant.now().plus(30, ChronoUnit.DAYS)));
+//        Token token = new Token();
+//        token.setUser(user);
+//
+//        //Apache commons lang3
+//        token.setTokenValue(RandomStringUtils.randomAlphanumeric(120));
+//
+//        token.setExpiryAt(Date.from(Instant.now().plus(30, ChronoUnit.DAYS)));
 
 
 //        return tokenRepository.save(token);
@@ -124,6 +124,8 @@ public class UserServiceImpl implements UserService {
     public User ValidateToken(String tokenValue) throws InvalidTokenException {
         //validate JWT token
         JwtParser jwtparser = Jwts.parser().verifyWith(secretKey).build();
+
+        //from claims extract users
         Claims claims = jwtparser.parseSignedClaims(tokenValue).getPayload();
 
 //        Long userId = (Long) claims.get("userId");
