@@ -5,7 +5,7 @@ Backend service responsible for user authentication and management.
 What it does:
 - User registration and login
 - Authentication and authorization
-- Clean controller–service–repository layering
+- Clean controller - service - repository layering
 
 Tech:
 - Java
