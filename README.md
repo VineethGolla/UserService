@@ -1,22 +1,33 @@
-User Service
+# User Authentication Service
 
-Backend service responsible for user authentication and management.
+## Overview
+Backend service for user authentication and management using Spring Boot. Supports secure login and registration using JWT and OAuth2.
 
-What it does:
-- User registration and login
-- Authentication and authorization
-- Clean controller - service - repository layering
+## Features
+- User registration and login APIs
+- JWT-based authentication
+- OAuth2 support
+- Secure REST APIs
+- MySQL persistence
 
-Tech:
+## Tech Stack
 - Java
 - Spring Boot
-- Maven
+- Spring Security
+- JWT
+- OAuth2
 - MySQL
 
-Structure:
-- controller: API layer
-- service: business logic
-- repository: data access
+## Architecture
+Layered architecture:
+Controller → Service → Repository
 
-Run:
-mvn spring-boot:run
+## How to Run
+1. Clone the repository
+2. Configure application.properties
+3. Run using Maven or Gradle
+
+## Future Improvements
+- Add role-based access control
+- Improve token refresh handling
+- Add caching layer
